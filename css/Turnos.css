@@ -220,26 +220,7 @@ a.selected{
 }
 
 .square {
-    width: 20rem;
-    height: 20rem;
-    background-color:#dbeafe;/* Color de fondo de los cuadrados */
-    /* display: flex; */
-    /*justify-content: center;  Centra el texto horizontalmente dentro del cuadrado */
-    /*align-items: center;  Centra el texto verticalmente dentro del cuadrado */
-    color: black; /* Color del texto */
-}
-.square2 {
-    width: 10rem;
-    height: 10rem;
-    background-color:none;/* Color de fondo de los cuadrados */
-    /* display: flex; */
-    /*justify-content: center;  Centra el texto horizontalmente dentro del cuadrado */
-    /*align-items: center;  Centra el texto verticalmente dentro del cuadrado */
-    color: black; /* Color del texto */
-}
-.square3 {
-    width: 20rem;
-    height: 30rem;
+
     background-color:none;/* Color de fondo de los cuadrados */
     /* display: flex; */
     /*justify-content: center;  Centra el texto horizontalmente dentro del cuadrado */
@@ -247,12 +228,57 @@ a.selected{
     color: black; /* Color del texto */
     border: black 1px solid;
 }
-.square strong {
-    font-size: 1.5rem; /* Tamaño del texto */
+.cart{
+    width: 40rem;
+    height: 20rem;
+    display: inline-block;
 }
-.square p {
-    font-size: 1rem; /* Tamaño del texto */
+
+.square .div1 {
+    display: flex;
 }
-.btn-agenda-box{
-    color:#3b8ff8;
+
+.btn-whatsapp{
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .color-whatsapp {background-color: #22c55e;} /* Green */
+
+  .button-container {
+    display: flex;
+    background-color:none;
+    padding: 8px;
+    border-radius: 8px;
+    gap: 4px; /* Espacio entre los botones */
+}
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 30px;
+    height: 30px;
+    padding: 8px;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    background-color: #007aff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }

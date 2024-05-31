@@ -215,18 +215,24 @@ a.selected{
     display: flex;
     justify-content: space-around; /* Distribuye los cuadrados con espacio entre ellos */
     align-items: center; /* Centra verticalmente si los cuadrados tienen diferentes alturas */
-    gap: 5px;
-    /* background-color: #f0f0f0;  */
+    gap: 20px; /* Espacio entre los elementos */
+    padding: 20px; /* Añade espacio alrededor del contenedor */
 }
 
 .square {
-    width: 20rem;
-    height: 20rem;
-    background-color:#dbeafe;/* Color de fondo de los cuadrados */
-    /* display: flex; */
-    /*justify-content: center;  Centra el texto horizontalmente dentro del cuadrado */
-    /*align-items: center;  Centra el texto verticalmente dentro del cuadrado */
-    color: black; /* Color del texto */
+    width: 300px; /* Ancho fijo */
+    height: 300px; /* Altura fija */
+    background-color: #dbeafe; /* Color de fondo de los cuadrados */
+    display: flex;
+    flex-direction: column; /* Alinea el texto verticalmente */
+    justify-content: center; /* Centra el texto verticalmente dentro del cuadrado */
+    align-items: center; /* Centra el texto horizontalmente dentro del cuadrado */
+    color: #333; /* Color del texto */
+    border: 1px solid #ddd; /* Borde sólido */
+    border-radius: 10px; /* Borde redondeado */
+    padding: 20px; /* Espacio interno */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: all 0.3s ease; /* Transición suave */
 }
 .square2 {
     width: 10rem;
@@ -238,14 +244,36 @@ a.selected{
     color: black; /* Color del texto */
 }
 .square3 {
-    width: 20rem;
-    height: 30rem;
-    background-color:none;/* Color de fondo de los cuadrados */
-    /* display: flex; */
-    /*justify-content: center;  Centra el texto horizontalmente dentro del cuadrado */
-    /*align-items: center;  Centra el texto verticalmente dentro del cuadrado */
-    color: black; /* Color del texto */
-    border: black 1px solid;
+    width: 300px; /* Ancho fijo */
+    height: 600px; /* Altura fija */
+    background-color: #f0f0f0; /* Color de fondo de los cuadrados */
+    display: flex;
+    flex-direction: column; /* Alinea el texto verticalmente */
+    justify-content: center; /* Centra el texto verticalmente dentro del cuadrado */
+    align-items: center; /* Centra el texto horizontalmente dentro del cuadrado */
+    color: #333; /* Color del texto */
+    border: 1px solid #ddd; /* Borde sólido */
+    border-radius: 10px; /* Borde redondeado */
+    padding: 20px; /* Espacio interno */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+.square3:hover {
+    transform: translateY(-5px); /* Efecto de levantamiento en hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada en hover */
+}
+
+.square3 strong {
+    font-size: 1.5rem; /* Tamaño del título */
+    color: #333; /* Color del título */
+    margin-bottom: 10px; /* Espacio inferior */
+}
+
+.square3 p {
+    font-size: 1rem; /* Tamaño del texto */
+    color: #666; /* Color del texto */
+    margin-bottom: 20px; /* Espacio inferior */
 }
 .square strong {
     font-size: 1.5rem; /* Tamaño del texto */

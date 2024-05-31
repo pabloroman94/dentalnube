@@ -210,53 +210,81 @@ a.selected{
     /* text-align: right; */
     align-items: center;
 }
-
 .flex-container {
     display: flex;
-    justify-content: space-around; /* Distribuye los cuadrados con espacio entre ellos */
-    align-items: center; /* Centra verticalmente si los cuadrados tienen diferentes alturas */
+    justify-content: space-around;
+    align-items: center;
     gap: 5px;
-    /* background-color: #f0f0f0;  */
 }
 
 .square {
-
-    background-color:none;/* Color de fondo de los cuadrados */
-    /* display: flex; */
-    /*justify-content: center;  Centra el texto horizontalmente dentro del cuadrado */
-    /*align-items: center;  Centra el texto verticalmente dentro del cuadrado */
-    color: black; /* Color del texto */
-    border: black 1px solid;
+    background-color: none;
+    color: black;
+    border: 1px solid black;
 }
-.cart{
+
+.cart {
     width: 40rem;
     height: 20rem;
     display: inline-block;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
-.square .div1 {
+.header {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
-.btn-whatsapp{
+.header strong {
+    font-size: 1.2rem;
+}
+
+.header p {
+    margin: 0;
+}
+
+.selection {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.selection input,
+.selection select {
+    width: 50%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-whatsapp {
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 0.5rem 1rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 1rem;
     cursor: pointer;
-  }
-  .color-whatsapp {background-color: #22c55e;} /* Green */
+    background-color: #22c55e;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
 
-  .button-container {
+.btn-whatsapp:hover {
+    background-color: #1b9e48;
+}
+
+.button-container {
     display: flex;
-    background-color:none;
+    background-color: none;
     padding: 8px;
     border-radius: 8px;
-    gap: 4px; /* Espacio entre los botones */
+    gap: 4px;
 }
 
 .button {
@@ -281,4 +309,366 @@ a.selected{
     background-color: #0056b3;
     transform: translateY(-2px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/******/
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+.schedule-view-days {
+  border: 1px solid hsl(214.3, 31.8%, 91.4%);
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(222.2, 47.4%, 11.2%);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  grid-column: span 6 / span 6;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.header-text h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.header-text p {
+  font-size: 0.875rem;
+  color: hsl(215.4, 16.3%, 46.9%);
+}
+
+.send-reminders-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  background-color: #38a169;
+  color: white;
+  font-weight: bold;
+  border-radius: 0.375rem;
+  transition: background-color 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.send-reminders-btn:hover {
+  background-color: #2f855a;
+}
+
+.whatsapp-icon {
+  margin-right: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+.content {
+  padding: 1.5rem;
+  padding-top: 0;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.date-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+}
+
+.date-button,
+.today-button {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: hsl(222.2, 47.4%, 11.2%);
+  border: 1px solid hsl(214.3, 31.8%, 91.4%);
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.date-button:hover,
+.today-button:hover {
+  background-color: hsl(210, 40%, 96.1%);
+}
+
+.calendar-icon {
+  margin-right: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+.dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.dropdown-input {
+  width: 100%;
+  padding: 0.5rem;
+  padding-right: 2rem;
+  border: 1px solid hsl(214.3, 31.8%, 91.4%);
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  color: hsl(222.2, 47.4%, 11.2%);
+}
+
+.dropdown-button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 0.5rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.dropdown-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: hsl(0, 0%, 60%);
+}
+
+.week-buttons {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  background-color: hsl(0, 0%, 96%);
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+}
+
+.week-day-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #007aff;
+  color: white;
+  border-radius: 0.125rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.week-day-button:hover {
+  transform: translateY(-0.125rem);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.week-day-button.active {
+  background-color: white;
+  color: hsl(222.2, 47.4%, 11.2%);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/***************/
+
+body {
+    font-family: Nunito, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.card {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(222.2, 47.4%, 11.2%);
+    border-radius: 0.5rem;
+    border: 1px solid hsl(214.3, 31.8%, 91.4%);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    margin: 1rem 0;
+    max-width: 600px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.description {
+    font-size: 0.875rem;
+    color: hsl(215.4, 16.3%, 46.9%);
+    margin: 0;
+}
+
+.button-primary {
+    background-color: hsl(210, 40%, 96.1%);
+    color: hsl(222.2, 47.4%, 11.2%);
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-primary:hover {
+    background-color: hsl(210, 40%, 94%);
+}
+
+.card-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid hsl(214.3, 31.8%, 91.4%);
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    color: hsl(222.2, 47.4%, 11.2%);
+}
+
+.dropdown-button {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-button svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: hsl(0, 0%, 60%);
+}
+
+.checkbox-container {
+    grid-column: span 2;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox-input {
+    appearance: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 1px solid hsl(214.3, 31.8%, 91.4%);
+    border-radius: 0.375rem;
+    margin-right: 0.5rem;
+    position: relative;
+    background-color: white;
+}
+
+.checkbox-input:checked {
+    background-color: hsl(215, 20.2%, 65.1%);
+}
+
+.checkbox-input:checked::before {
+    content: '';
+    position: absolute;
+    top: 0.25rem;
+    left: 0.5rem;
+    width: 0.25rem;
+    height: 0.5rem;
+    border: solid white;
+    border-width: 0 0.125rem 0.125rem 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-description {
+    font-size: 0.875rem;
+    color: hsl(215.4, 16.3%, 46.9%);
+    margin: 0;
+}
+
+/* Estilos generales */
+body {
+    font-family: Nunito, sans-serif;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+/* Estilos de la tabla */
+.table-container {
+    overflow-x: auto;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.custom-table th,
+.custom-table td {
+    border: 1px solid #e5e7eb;
+    padding: 8px;
+}
+
+.custom-table th {
+    background-color: #f3f4f6;
+    text-align: left;
+    font-weight: bold;
+}
+
+.custom-table tbody tr:nth-child(even) {
+    background-color: #f3f4f6;
+}
+
+.custom-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; /* Centra el texto horizontalmente */
+    border-radius: 999px;
+    padding: 0.25rem 1rem; /* Reduzco el padding para hacer el botón más compacto */
+    font-weight: bold;
+    font-size: 0.75rem; /* Reduzco el tamaño de fuente para que sea más pequeño */
+    color: #3b8ff8;
+    background-color: #dbeafe;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none; /* Elimino el subrayado */
+}
+
+.custom-button:hover {
+    color: #2c6cdf;
+    background-color: #c7d2fe;
+    border-color: #2c6cdf;
 }
